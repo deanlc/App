@@ -1,0 +1,57 @@
+body {
+    font-family: 'Montserrat';
+    background-image: url("https://hd.unsplash.com/photo-1434396505260-9ec0d6491795");
+    background-size: cover;
+    
+    color: whitesmoke;
+    margin-left: 5%;
+}
+
+/* Hide sections by default */
+#home_section {
+    
+} #results {
+    display: none;
+} #details {
+    display: none;
+}
+
+#logo_div {
+    max-width: 70%;
+    margin: auto;
+}
+
+img#logo {
+    max-height: 300px;
+    
+    display: block;
+    margin: auto;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.23);
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding: 6px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+button, select {
+    background-color: rgb(62, 62, 62);
+    border-color: darkslategray;
+    border-radius: 5px;
+    
+    width: 75px;
+    height: 40px;
+    
+}   select {
+    width: 50%;
+    height: 40px;
+}
+
+li img {
+    max-width: 50px;
+}
