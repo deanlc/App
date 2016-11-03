@@ -40,15 +40,8 @@ find_button.click(function(){
     
     home.hide();
     results.show();
-});
-
-function showDetails (data, interfaceElement) 
-{
-  var detailsHTML = makeDetailsHTML(data)
-  interfaceElement.html(detailsHTML)
-}
-
-$("#results li").click(function() {
+    
+    $("#results li").click(function() {
     // grab the id from the clicked item
     var resultId = $(this).attr('id');
     // use the id to get the right data
@@ -61,6 +54,29 @@ $("#results li").click(function() {
     results.hide();
     details.show();
 });
+});
+
+function showDetails (data, interfaceElement) 
+{
+  var detailsHTML = makeDetailsHTML(data)
+  interfaceElement.html(detailsHTML)
+}
+
+//$("#results li").click(function() {
+//    // grab the id from the clicked item
+//    var resultId = $(this).attr('id');
+//    // use the id to get the right data
+//    var resultData = resultsList[resultId]
+//    // call the function showDetails()
+//    showDetails(resultData, detailsInfo);
+//    
+//    console.log(resultData);
+//    // show the details!
+//    results.hide();
+//    details.show();
+//});
+
+
 
 back_home.click( function () 
 {
