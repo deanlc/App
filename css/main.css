@@ -2,6 +2,7 @@ body {
     font-family: 'Montserrat';
     background-image: url("https://hd.unsplash.com/photo-1434396505260-9ec0d6491795");
     background-size: cover;
+    text-align: center;
     
     color: whitesmoke;
     margin-left: 5%;
@@ -9,7 +10,7 @@ body {
 
 /* Hide sections by default */
 #home_section {
-    text-align: center;
+    
 } #results {
     display: none;
 } #details {
