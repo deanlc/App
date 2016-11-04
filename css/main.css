@@ -1,0 +1,68 @@
+body {
+    font-family: 'Montserrat';
+    background-image: url("https://images.unsplash.com/photo-1468103933896-2c34a78104c2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=584521db353d5e87e0b44095f22b008b");
+    background-size: cover;
+    text-align: center;
+    
+    color: whitesmoke;
+    margin-left: 5%;
+}
+
+/* Hide sections by default */
+#home_section {
+    
+} #results {
+    display: none;
+} #details {
+    display: none;
+}
+
+#logo_div {
+    max-width: 70%;
+    margin: auto;
+}
+
+img#logo {
+    max-height: 300px;
+    filter: invert(100%);
+    
+    display: block;
+    margin: auto;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.23);
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding: 6px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+#searchbar {
+    background-color: rgb(62, 62, 62);
+    width: 50%;
+    height: 35px;
+    
+    border-radius: 5px;
+    border-color: darkslategray;
+}
+
+button, select {
+    background-color: rgb(62, 62, 62);
+    border-color: darkslategray;
+    border-radius: 5px;
+    
+    width: 75px;
+    height: 40px;
+    
+}   select {
+    width: 50%;
+    height: 40px;
+}
+
+li img {
+    max-width: 50px;
+}
