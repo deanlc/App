@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>App Template</title>
+        <title>Connect</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,9 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         
+            <!--      load google fonts & mapbox css      -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css' rel='stylesheet' /> 
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -21,23 +23,33 @@
         <![endif]-->
 
         <!--        home section-->
-        <div id="logo_div"><a id="logo_link"><img id="logo" src="img/logo.png"></a></div>
+        <div id="logo_div"><a id="logo_link"> <h1 id="rb"><img id="logo" src="img/logo.png">Connect Online</h1></a></div>
+        
         <section id="home_section">
-        <h1>I'm looking for...</h1>
-<!--
+        <h1>What are you looking for?</h1>
+            <button id="students">Student Search</button> <button id="jobs">Jobs List</button>
+            <p>Select one to get started.</p>
+        </section>
+        
+        <section id="jobs_section">
+        <h1>list lol</h1>
+            <p></p>
+        </section>
+        
+        <section id="search_section">
+        <h1>Select a course...</h1>
             <select id="select">
-                <option value="bakingSkills">Bake a cake</option>
-                <option value="diySkills">Move my house</option>
-                <option value="bakingSkills">Bake a pizza</option>
-                <option value="likesPets">Walk my cat</option>
-                <option value="codingSkills">Make me a website</option>
+                <option value="animation">Animation</option>
+                <option value="soundDesign">Sound Design</option>
+                <option value="musicMedia">Music for Media</option>
+                <option value="webMedia">Web Media Production</option>
+                <option value="graphicDesign">Graphic Design</option>
+                <option value="fashion">Fashion</option>
             </select><br><br>
--->
-            <input type="text" placeholder="  What do you need? (e.g. photographer)" id="searchbar">
             
             <button id="find_button">Search</button>
             
-            <p>Find students with the skills you need to collaborate with.</p>
+            <p>Find students with the skills you need and collaborate with them.</p>
             <p>Search to get started.</p>
         </section>
         
@@ -45,17 +57,13 @@
         
         <!--        results section-->
         <section id="results">
-            <button id="back_home">Back</button>
+            <button id="back_home">Back</button> <button class="toggle button">Map</button>
             <h1>"Search"</h1>
             <p>These people might be able to help you -</p>
+            <ol></ol>
             
-            <ol>
-                <li>
-                    <img src="https://randomuser.me/api/portraits/med/men/83.jpg">
-                    <a><h2>Name</h2></a>
-                    <p>Description</p>
-                </li>
-            </ol>
+            <div id='map'></div>
+            
         </section>
         <br/>
         <!--        details section-->
@@ -75,6 +83,9 @@
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
+            <!--      load mapbox      -->
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.js'></script>
+        <script src="js/mapbox.js"></script>
         <script src="js/main.js"></script>
         <script src="js/filter.js"></script>
         <script src="js/show.js"></script>

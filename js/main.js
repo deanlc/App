@@ -1,8 +1,12 @@
 // select HTML elements
 var home = jQuery('#home_section');
+var search = jQuery('#search_section');
+var jobs = jQuery('#jobs_section');
 var results = jQuery('#results');
 var details = jQuery('#details');
 var find_button = $('#find_button');
+var students_button = $('#students');
+var jobs_button = $('#jobs');
 var back_home = $('#back_home');
 var home_dropdown = $('#select');
 var back_results = $('#back_results');
@@ -15,15 +19,29 @@ var person_1 = $('#person_1');
 
 // fade in home
 home.hide();
-home.fadeIn(3000);
+home.fadeIn(500);
 
 // reset the page
 logo_link.click( function () 
 {   
-    home.fadeIn(3000);
+    home.fadeIn(500);
     results.hide();
     details.hide();
+    search.hide();
+    jobs.hide();
     
+});
+
+students_button.click( function () 
+{   
+    home.hide();
+    search.fadeIn(500);
+});
+
+jobs_button.click( function () 
+{   
+    home.hide();
+    jobs.fadeIn(500);
 });
 
 // button clicks
@@ -39,7 +57,8 @@ find_button.click(function(){
     showList(resultsList, resultsOL);
     
     home.hide();
-    results.show();
+    search.hide();
+    results.fadeIn(500);
     
     $("#results li").click(function() {
     // grab the id from the clicked item
@@ -62,21 +81,29 @@ function showDetails (data, interfaceElement)
   interfaceElement.html(detailsHTML)
 }
 
-//$("#results li").click(function() {
-//    // grab the id from the clicked item
-//    var resultId = $(this).attr('id');
-//    // use the id to get the right data
-//    var resultData = resultsList[resultId]
-//    // call the function showDetails()
-//    showDetails(resultData, detailsInfo);
-//    
-//    console.log(resultData);
-//    // show the details!
-//    results.hide();
-//    details.show();
-//});
+var resultsToggleButton = $('#results .toggle')
+var resultsMap = $('#map')
 
-
+resultsToggleButton.click( function()
+{
+    // list or map?
+    // let's check the current state of the list
+    // if it's 'block' then we want to show the map
+    // otherwise we want to show the list
+    var state = resultsOL.css('display') == 'block' ? 'map' : 'list'
+    if (state == 'list')
+    {
+        resultsOL.show()
+        resultsMap.hide()
+        resultsToggleButton.html('Map')
+    } 
+    else
+    {
+        resultsOL.hide()
+        resultsMap.show() 
+        resultsToggleButton.html('List')
+    }
+});
 
 back_home.click( function () 
 {
@@ -97,3 +124,4 @@ back_results.click( function () {
 //    details.show();
 //    
 //});
+
