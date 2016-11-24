@@ -84,6 +84,7 @@
     	// see: http://www.w3schools.com/js/js_objects.asp
         var value = selectedOption;
         var course = person.course;
+        
         console.log("You selected " + value);
 
         // typeof will check the type of element

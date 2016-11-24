@@ -2,13 +2,14 @@
 var home = jQuery('#home_section');
 var search_jobs = jQuery('#search_jobs');
 var find_jobs = jQuery('#find_jobs');
+var jobs_button = $('#jobs');
+var job_dropdown = $('#select_job');
 var search = jQuery('#search_section');
 var jobs = jQuery('#jobs_section');
 var results = jQuery('#results');
 var details = jQuery('#details');
 var find_button = $('#find_button');
 var students_button = $('#students');
-var jobs_button = $('#jobs');
 var back_home = $('#back_home');
 var home_dropdown = $('#select');
 var back_results = $('#back_results');
@@ -79,6 +80,15 @@ find_button.click(function(){
     results.hide();
     details.show();
 });
+});
+
+find_jobs.click(function(){
+    var selectedJob = job_dropdown.val();
+    console.log("You picked " + selectedJob);
+    
+    home.hide();
+    search_jobs.hide();
+    results.fadeIn(500);
 });
 
 function showDetails (data, interfaceElement) 
