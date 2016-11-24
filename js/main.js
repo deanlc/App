@@ -1,5 +1,7 @@
 // select HTML elements
 var home = jQuery('#home_section');
+var search_jobs = jQuery('#search_jobs');
+var find_jobs = jQuery('#find_jobs');
 var search = jQuery('#search_section');
 var jobs = jQuery('#jobs_section');
 var results = jQuery('#results');
@@ -30,6 +32,7 @@ logo_link.click( function ()
     details.hide();
     search.hide();
     jobs.hide();
+    search_jobs.hide();
     
 });
 
@@ -42,7 +45,7 @@ students_button.click( function ()
 jobs_button.click( function () 
 {   
     home.hide();
-    jobs.fadeIn(500);
+    search_jobs.fadeIn(500);
 });
 
 // button clicks

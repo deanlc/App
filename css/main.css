@@ -72,7 +72,7 @@ li a:hover:not(.active) {
 /* Hide sections by default */
 #home_section {
     
-} #results, #details, #search_section, #jobs_section {
+} #results, #details, #search_section, #jobs_section, #search_jobs{
     display: none;
 } #details img {
     max-height: 200px;

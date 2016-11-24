@@ -15,6 +15,7 @@ var database = firebase.database();
 
 // only people part of DB
 var peopleData = database.ref('people');
+var jobsData = database.ref('jobs')
 
 // list of people
 
