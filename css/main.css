@@ -4,7 +4,6 @@ body {
     background-size: cover;
     background-attachment: fixed;
     text-align: center;
-    
     background-color: rgb(85, 195, 246);
     color: whitesmoke;
     margin-left: 5%;
@@ -18,30 +17,32 @@ ol {
 li {
     font-size: 1em;
     padding: 5px;
-    
     text-align: left;
     border-style: solid;
     border-color: rgb(85, 195, 246);
     border-width: thin;
     border-radius: 10px;
-    
     background-color: rgba(85, 195, 246, 0.22);
     color: whitesmoke;
-} li:hover {
+}
+
+li:hover {
     background-color: rgba(85, 195, 246, 0.54);
-    
     -webkit-transition: all .3s;
     transition: all .2s;
-} li img {
+}
+
+li img {
     max-height: 150px;
     font-size: 1.5em;
     margin: 0;
     padding: 5px;
     display: inline;
     border-radius: 10px;
-} li h2 {
-    font-size: 1em;
-} li p, h2 {
+}
+
+#results li h2 {
+    font-size: 3em;
     display: inline;
 }
 
@@ -69,12 +70,20 @@ li a:hover:not(.active) {
     background-color: #55c3f6;
 }
 
+
 /* Hide sections by default */
-#home_section {
-    
-} #results, #details, #search_section, #jobs_section, #search_jobs{
+
+#home_section {}
+
+#results,
+#details,
+#search_section,
+#jobs_section,
+#search_jobs {
     display: none;
-} #details img {
+}
+
+#details img {
     max-height: 200px;
     border-radius: 10px;
 }
@@ -85,8 +94,9 @@ canvas.mapboxgl-canvas {
 
 #map {
     width: 100%;
-    height: 30rem; /* experiment with different heights */
-    display: none; 
+    height: 30rem;
+    /* experiment with different heights */
+    display: none;
 }
 
 #logo_div {
@@ -99,8 +109,7 @@ canvas.mapboxgl-canvas {
 
 img#logo {
     max-height: 50px;
-    
-/*    display: block;*/
+    /*    display: block;*/
     margin: auto;
 }
 
@@ -112,15 +121,17 @@ section {
     border-style: solid;
     border-color: rgb(85, 195, 246);
     border-width: 1px;
-    
     padding: 6px;
     padding-left: 10px;
-/*    border-radius: 10px;*/
-} #rb {
+    /*    border-radius: 10px;*/
+}
+
+#rb {
     font-size: 5em;
-} #rb:hover {
+}
+
+#rb:hover {
     color: rgb(85, 195, 246);
-    
     -webkit-transition: all .3s;
     transition: all .2s;
 }
@@ -129,7 +140,6 @@ section {
     background-color: rgb(62, 62, 62);
     width: 50%;
     height: 35px;
-    
     border-radius: 5px;
     border-color: darkslategray;
 }
@@ -139,32 +149,38 @@ select {
     border-color: whitesmoke;
     border-radius: 5px;
     color: black;
-    
     width: 75px;
     height: 40px;
-    
-}   select {
+}
+
+select {
     width: 50%;
     height: 40px;
 }
+
 button {
     background-color: rgba(85, 195, 246, 0.22);
     border-style: solid;
     border-width: 1px;
     border-color: rgb(85, 195, 246);
     font-size: 20px;
-    
     width: 200px;
     height: 60px;
-} button:hover {
+}
+
+button:hover {
     background-color: rgb(85, 195, 246);
     border-color: whitesmoke;
     -webkit-transition: all .3s;
     transition: all .2s;
-} #register {
+}
+
+#register {
     margin-top: 10%;
     width: 500px;
-} .li_result {
+}
+
+.li_result {
     background: rgba(0, 0, 0, 0.55);
     max-width: 100%;
     margin-left: auto;
@@ -172,8 +188,17 @@ button {
     border-style: solid;
     border-color: rgb(85, 195, 246);
     border-width: 1px;
-    
     padding: 0px;
     padding-left: 0px;
-/*    border-radius: 10px;*/
+    /*    border-radius: 10px;*/
+}
+
+.left {
+    display: fixed;
+    float: left;
+}
+
+.toggle {
+    display: fixed;
+    float: right;
 }

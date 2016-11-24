@@ -1,126 +1,126 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Connect</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--        <link rel="apple-touch-icon" href="apple-touch-icon.png">-->
-<!--         Place favicon.ico in the root directory -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Connect</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--        <link rel="apple-touch-icon" href="apple-touch-icon.png">-->
+    <!--         Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--      load google fonts & mapbox css      -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css' rel='stylesheet' /> </head>
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        
-            <!--      load google fonts & mapbox css      -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css' rel='stylesheet' /> 
-    </head>
-    <body>
-        <!--[if lt IE 8]>
+<body>
+    <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-        <!--        home section-->
-        <div id="logo_div"><a id="logo_link"> <h1 id="rb"><img id="logo" src="img/logo.png">Connect Online</h1></a></div>
-        
-        <section id="home_section">
+    <!--        home section-->
+    <div id="logo_div">
+        <a id="logo_link">
+            <h1 id="rb"><img id="logo" src="img/logo.png">Connect Online</h1></a>
+    </div>
+    <section id="home_section">
         <h1>What are you looking for?</h1>
-            <button id="students">Student Search</button> <button id="jobs">Jobs List</button>
-            <p>Select one to get started.</p>
-        </section>
-        
-<!--
+        <button id="students">Student Search</button>
+        <button id="jobs">Jobs List</button>
+        <p>Select one to get started.</p>
+    </section>
+    <!--
             <section id="register">
                 <h1>Want to add yourself to Connect? Sign up here!</h1>
                 <button id="signup">Register</button>
             </section>
 -->
-        
-        <section id="jobs_section">
-            <p></p>
-        </section>
-        
-        <section id="search_jobs">
+    <section id="jobs_section">
+        <p></p>
+    </section>
+    <section id="search_jobs">
         <h1>Select a course...</h1>
-            <select id="select_job">
-                <option value="animation">Animation</option>
-                <option value="soundDesign">Sound Design</option>
-                <option value="musicMedia">Music for Media</option>
-                <option value="webMedia">Web Media Production</option>
-                <option value="graphicDesign">Graphic Design</option>
-                <option value="fashion">Fashion</option>
-            </select><br><br>
-            
-            <button id="find_jobs">Search</button>
-            
-            <p>Find projects that you'll be able to help with.</p>
-        </section>
-        
-        <section id="search_section">
+        <select id="select_job">
+            <option value="animation">Animation</option>
+            <option value="soundDesign">Sound Design</option>
+            <option value="musicMedia">Music for Media</option>
+            <option value="webMedia">Web Media Production</option>
+            <option value="graphicDesign">Graphic Design</option>
+            <option value="fashion">Fashion</option>
+        </select>
+        <br>
+        <br>
+        <button id="find_jobs">Search</button>
+        <p>Find projects that you'll be able to help with.</p>
+    </section>
+    <section id="search_section">
         <h1>Select a course...</h1>
-            <select id="select">
-                <option value="animation">Animation</option>
-                <option value="soundDesign">Sound Design</option>
-                <option value="musicMedia">Music for Media</option>
-                <option value="webMedia">Web Media Production</option>
-                <option value="graphicDesign">Graphic Design</option>
-                <option value="fashion">Fashion</option>
-            </select><br><br>
-            
-            <button id="find_button">Search</button>
-            
-            <p>Search for students with the skills you need and collaborate with them.</p>
-        </section>
-        
-        <br/>
-        
-        <!--        results section-->
-        <section id="results">
-            <button id="back_home">Back</button> <button class="toggle button">Map</button>
-            <h1 id="search_term"></h1>
-            <table id="results_li"><p>These people might be able to help you -
-            <ol>  
-            </ol>
+        <select id="select">
+            <option value="animation">Animation</option>
+            <option value="soundDesign">Sound Design</option>
+            <option value="musicMedia">Music for Media</option>
+            <option value="webMedia">Web Media Production</option>
+            <option value="graphicDesign">Graphic Design</option>
+            <option value="fashion">Fashion</option>
+        </select>
+        <br>
+        <br>
+        <button id="find_button">Search</button>
+        <p>Search for students with the skills you need and collaborate with them.</p>
+    </section>
+    <br/>
+    <!--        results section-->
+    <section id="results">
+        <button class="left" id="back_home">Back</button>
+        <button class="toggle button">Map</button>
+        <h1 id="search_term"></h1>
+        <table id="results_li">
+            <p>These people might be able to help you -
+                <ol> </ol>
             </p>
-            </table>
-            <div id='map'></div>
-            
-        </section>
+        </table>
+        <div id='map'></div>
+    </section>
+    <br/>
+    <!--        details section-->
+    <section id="details">
+        <button class="left" id="back_results">Back</button>
         <br/>
-        <!--        details section-->
-        <section id="details">
-            <button id="back_results">Back</button><br/><br/>
-                <div id="info">
-                    <img src="https://randomuser.me/api/portraits/med/men/83.jpg">
-                    <h2>Name</h2>
-                    <p>Description</p>
-                    <a class="contact_button">Contact this person</a>
-                </div>
-        </section>
+        <br/>
+        <br/>
+        <div id="info"> <a class="contact_button">Contact this person</a> </div>
+    </section>
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
+    </script>
+    <script src="js/plugins.js"></script>
+    <!--      load mapbox      -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.js'></script>
+    <script src="js/mapbox.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/show.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function (b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] = function () {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = 'https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
 
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
-        <script src="js/firebase.js"></script>
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-            <!--      load mapbox      -->
-        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.js'></script>
-        <script src="js/mapbox.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/filter.js"></script>
-        <script src="js/show.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-    </body>
 </html>
