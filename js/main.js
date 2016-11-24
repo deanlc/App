@@ -14,6 +14,7 @@ var logo_link = $('#logo_link');
 var detailsInfo = $('#details #info');
 var resultsOL = $('#results ol');
 var resultsLI = jQuery('#results li');
+var search_term = $('#search_term');
 
 var person_1 = $('#person_1');
 
@@ -49,6 +50,8 @@ find_button.click(function(){
     // capture the user chosen option
     var selectedOption = home_dropdown.val();
     console.log("You picked " + selectedOption);
+    
+    search_term.text("Results for " + selectedOption);
     
     // filter+sort people by user selection
     var resultsList = filterAndSortList(peopleList, selectedOption);
