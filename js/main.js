@@ -17,6 +17,7 @@ var logo_link = $('#logo_link');
 var detailsInfo = $('#details #info');
 var resultsOL = $('#results ol');
 var jobResultsOL = $('#results ol');
+var results_message = $('#results_message');
 var resultsLI = jQuery('#results li');
 var search_term = $('#search_term');
 var person_1 = $('#person_1');
@@ -63,8 +64,10 @@ find_button.click(function () {
         var selectedName = 'Graphic Design';
     } 
     
+    
     console.log("You picked " + selectedOption);
     search_term.text("Results for " + selectedName);
+    results_message.text("These people might be able to help you:");
     // filter+sort people by user selection
     var resultsList = filterAndSortList(peopleList, selectedOption);
     console.log(resultsList);
@@ -105,7 +108,7 @@ find_jobs.click(function () {
         var selectedName = 'Graphic Design';
     } 
     search_term.text("Results for " + selectedName);
-    
+    results_message.text("You might be interested in these jobs:");
     
     console.log("Course: " + jobs.course);
     var jobsResults = filterAndSortJobs(jobsList, selectedJob);
