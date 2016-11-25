@@ -24,11 +24,9 @@ function makeJobListItemHTML(data, index) {
     // li = List Item
     var li = '<li id="' + index + '">' 
     + '<h2 class="title">' + data.title 
-    + '</h2><br>' + '<p>' + data.description 
-    + ', posted by ' + data.name 
-    + ' on ' 
-    + data.date + ' </p>' + ''
-    + '<img src="' + data.image + '"></li><hr>' 
+    + '</h2><br>Posted by ' + data.name + ' on ' + data.date + ' </p>'
+    + '<br>' + '<p>' + data.description 
+    + '</p><img src="' + data.image + '"></li><hr>' 
     return li;
 }
 
