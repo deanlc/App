@@ -8,7 +8,7 @@ function makeListItemHTML(data, index) {
       </li>
     */
     // li = List Item
-    var li = '<li id="' + index + '">' + '<img src="' + data.image + '">' + '<h2>' + data.name + '</h2><br>' + '<p>' + data.about + '</p>' + '</li><hr>'
+    var li = '<li id="' + index + '">' + '<img src="' + data.image + '"><br>' + '<h2>' + data.name + '</h2><br>' + '<p>' + data.about + '</p>' + '</li><hr>'
     return li;
 }
 
@@ -21,10 +21,14 @@ function makeJobListItemHTML(data, index) {
           <h2>Matteo</h2>
       </li>
     */
+    
+    var date = moment(data.date).endOf('day').fromNow();
+    
     // li = List Item
     var li = '<li id="' + index + '">' 
     + '<h2 class="title">' + data.title 
-    + '</h2><br>Posted by ' + data.name + ' on ' + data.date + ' </p>'
+    + '</h2><br>Posted by ' + data.name + ', ' + date
+ + '.</p>'
     + '<br>' + '<p>' + data.description 
     + '</p><img src="' + data.image + '"></li><hr>' 
     return li;

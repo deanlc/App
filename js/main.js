@@ -44,8 +44,27 @@ jobs_button.click(function () {
 find_button.click(function () {
     // capture the user chosen option
     var selectedOption = home_dropdown.val();
+    
+    var selectedName;
+    
+    if (selectedOption == 'webMedia') {
+        var selectedName = 'Web Media';
+    } if (selectedOption == 'animation') {
+        var selectedName = 'Animation';
+    } if (selectedOption == 'fashion') {
+        var selectedName = 'Fashion';
+    } if (selectedOption == 'photography') {
+        var selectedName = 'Photography';
+    } if (selectedOption == 'soundDesign') {
+        var selectedName = 'Sound Design';
+    } if (selectedOption == 'musicMedia') {
+        var selectedName = 'Music for Media';
+    } if (selectedOption == 'graphicDesign') {
+        var selectedName = 'Graphic Design';
+    } 
+    
     console.log("You picked " + selectedOption);
-    search_term.text("Results for " + selectedOption);
+    search_term.text("Results for " + selectedName);
     // filter+sort people by user selection
     var resultsList = filterAndSortList(peopleList, selectedOption);
     console.log(resultsList);
@@ -68,8 +87,25 @@ find_button.click(function () {
 });
 find_jobs.click(function () {
     var selectedJob = job_dropdown.val();
-    console.log("You picked " + selectedJob);
-    search_term.text("Results for " + selectedJob);
+    var selectedName;
+    
+    if (selectedJob == 'webMedia') {
+        var selectedName = 'Web Media';
+    } if (selectedJob == 'animation') {
+        var selectedName = 'Animation';
+    } if (selectedJob == 'fashion') {
+        var selectedName = 'Fashion';
+    } if (selectedJob == 'photography') {
+        var selectedName = 'Photography';
+    } if (selectedJob == 'soundDesign') {
+        var selectedName = 'Sound Design';
+    } if (selectedJob == 'musicMedia') {
+        var selectedName = 'Music for Media';
+    } if (selectedJob == 'graphicDesign') {
+        var selectedName = 'Graphic Design';
+    } 
+    search_term.text("Results for " + selectedName);
+    
     
     console.log("Course: " + jobs.course);
     var jobsResults = filterAndSortJobs(jobsList, selectedJob);

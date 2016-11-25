@@ -14,7 +14,8 @@
     <!--      load google fonts, favicon & mapbox css      -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css' rel='stylesheet' /> </head>
+    <link href="fonts/fonts.css" rel="stylesheet">
+<!--    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css' rel='stylesheet' /> </head>-->
 
 <body>
     <!--[if lt IE 8]>
@@ -43,7 +44,7 @@
     <section id="search_jobs">
         <h1>Select a course...</h1>
         <select id="select_job">
-            <option value="animation" name="Animation">Animation</option>
+            <option value="animation">Animation</option>
             <option value="soundDesign">Sound Design</option>
             <option value="musicMedia">Music for Media</option>
             <option value="webMedia">Web Media Production</option>
@@ -60,7 +61,7 @@
     <section id="search_section">
         <h1>Select a course...</h1>
         <select id="select">
-            <option value="animation">Animation</option>
+            <option value="animation" name="Animation">Animation</option>
             <option value="soundDesign">Sound Design</option>
             <option value="musicMedia">Music for Media</option>
             <option value="webMedia">Web Media Production</option>
@@ -77,7 +78,7 @@
     <!--        results section-->
     <section id="results">
         <button class="left" id="back_home">Back</button>
-        <button class="toggle button">Map</button>
+<!--        <button class="toggle button">Map</button>-->
         <h1 id="search_term"></h1>
         <table id="results_li">
             <p>These people might be able to help you -
@@ -85,7 +86,7 @@
                 <ul></ul>
             </p>
         </table>
-        <div id='map'></div>
+<!--        <div id='map'></div>-->
     </section>
     <br/>
     <!--        details section-->
@@ -105,11 +106,14 @@
     </script>
     <script src="js/plugins.js"></script>
     <!--      load mapbox      -->
+<!--
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.js'></script>
     <script src="js/mapbox.js"></script>
+-->
     <script src="js/main.js"></script>
     <script src="js/filter.js"></script>
     <script src="js/show.js"></script>
+    <script src="js/moment.min.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         (function (b, o, i, l, e, r) {

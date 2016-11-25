@@ -1,5 +1,5 @@
 body {
-    font-family: 'Ubuntu';
+    font-family: 'ravensbourne_sansregular';
     background-image: url("http://i.imgur.com/nA9gQvc.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -7,6 +7,8 @@ body {
     background-color: rgb(85, 195, 246);
     color: whitesmoke;
     margin-left: 5%;
+} b {
+    font-family: 'ravensbourne_sansbold';
 }
 
 ol {
@@ -23,7 +25,7 @@ li:hover {
 li {
     font-size: 1em;
     padding: 5px;
-    text-align: left;
+    text-align: center;
     border-style: solid;
     border-color: rgb(85, 195, 246);
     border-width: thin;

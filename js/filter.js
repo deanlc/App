@@ -141,7 +141,12 @@
 
     // using the Array.sort function to sort the array and store the result in sortedList
     // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-    var sortedJobs = filteredJobs;
+    var sortedJobs = filteredJobs.sort(function(a, b) 
+    {
+        var a = new Date(a.date);
+        var b = new Date(b.date);
+        return a>b ? -1 : a<b ? 1 : 0;
+    });
 
     return sortedJobs;
 }
