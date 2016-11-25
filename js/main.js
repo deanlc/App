@@ -16,128 +16,122 @@ var back_results = $('#back_results');
 var logo_link = $('#logo_link');
 var detailsInfo = $('#details #info');
 var resultsOL = $('#results ol');
+var jobResultsOL = $('#results ol');
 var resultsLI = jQuery('#results li');
 var search_term = $('#search_term');
-
 var person_1 = $('#person_1');
-
 // fade in home
 home.hide();
 home.fadeIn(500);
-
 // reset the page
-logo_link.click( function () 
-{   
+logo_link.click(function () {
     home.fadeIn(500);
     results.hide();
     details.hide();
     search.hide();
     jobs.hide();
     search_jobs.hide();
-    
 });
-
-students_button.click( function () 
-{   
+students_button.click(function () {
     home.hide();
     search.fadeIn(500);
 });
-
-jobs_button.click( function () 
-{   
+jobs_button.click(function () {
     home.hide();
     search_jobs.fadeIn(500);
 });
-
 // button clicks
-find_button.click(function(){
+find_button.click(function () {
     // capture the user chosen option
     var selectedOption = home_dropdown.val();
     console.log("You picked " + selectedOption);
-    
     search_term.text("Results for " + selectedOption);
-    
     // filter+sort people by user selection
     var resultsList = filterAndSortList(peopleList, selectedOption);
     console.log(resultsList);
-    
     showList(resultsList, resultsOL);
-    
     home.hide();
     search.hide();
     results.fadeIn(500);
-    
-    $("#results li").click(function() {
-    // grab the id from the clicked item
-    var resultId = $(this).attr('id');
-    // use the id to get the right data
-    var resultData = resultsList[resultId]
-    // call the function showDetails()
-    showDetails(resultData, detailsInfo);
-    
-    console.log(resultData);
-    // show the details!
-    results.hide();
-    details.show();
+    $("#results li").click(function () {
+        // grab the id from the clicked item
+        var resultId = $(this).attr('id');
+        // use the id to get the right data
+        var resultData = resultsList[resultId]
+            // call the function showDetails()
+        showDetails(resultData, detailsInfo);
+        console.log(resultData);
+        // show the details!
+        results.hide();
+        details.show();
+    });
 });
-});
-
-find_jobs.click(function(){
+find_jobs.click(function () {
     var selectedJob = job_dropdown.val();
     console.log("You picked " + selectedJob);
+    search_term.text("Results for " + selectedJob);
+    
+    console.log("Course: " + jobs.course);
+    var jobsResults = filterAndSortJobs(jobsList, selectedJob);
+    console.log(jobsResults);
+    showJobs(jobsResults, jobResultsOL);
     
     home.hide();
     search_jobs.hide();
     results.fadeIn(500);
+    
+    $("#results li").click(function () {
+        // grab the id from the clicked item
+        var jobResultId = $(this).attr('id');
+        // use the id to get the right data
+        var jobResultData = jobsResults[jobResultId]
+            // call the function showDetails()
+        showJobDetails(jobResultData, detailsInfo);
+        console.log(jobResultData);
+        // show the details!
+        results.hide();
+        details.show();
+    });
 });
 
-function showDetails (data, interfaceElement) 
-{
-  var detailsHTML = makeDetailsHTML(data)
-  interfaceElement.html(detailsHTML)
+function showDetails(data, interfaceElement) {
+    var detailsHTML = makeDetailsHTML(data)
+    interfaceElement.html(detailsHTML)
 }
-
+function showJobDetails(data, interfaceElement) {
+    var jobDetailsHTML = makeJobDetailsHTML(data)
+    interfaceElement.html(jobDetailsHTML)
+}
 var resultsToggleButton = $('#results .toggle')
 var resultsMap = $('#map')
-
-resultsToggleButton.click( function()
-{
+resultsToggleButton.click(function () {
     // list or map?
     // let's check the current state of the list
     // if it's 'block' then we want to show the map
     // otherwise we want to show the list
     var state = resultsOL.css('display') == 'block' ? 'map' : 'list'
-    if (state == 'list')
-    {
+    if (state == 'list') {
         resultsOL.show()
         resultsMap.hide()
         resultsToggleButton.html('Map')
-    } 
-    else
-    {
+    }
+    else {
         resultsOL.hide()
-        resultsMap.show() 
+        resultsMap.show()
         resultsToggleButton.html('List')
     }
 });
-
-back_home.click( function () 
-{
+back_home.click(function () {
     home.show();
     results.hide();
-    
 });
-
-back_results.click( function () {
+back_results.click(function () {
     results.show();
     details.hide();
-    
 });
-
 //person_1.click( function () 
 //{
 //    results.hide();
 //    details.show();
 //    
 //});
-

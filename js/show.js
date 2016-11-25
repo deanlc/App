@@ -12,6 +12,26 @@ function makeListItemHTML(data, index) {
     return li;
 }
 
+function makeJobListItemHTML(data, index) {
+    /*
+      This function creates some nice HTML around data for the #home section
+      Return something like this:
+      <li>
+          <img src="https://ma.tteo.me/assets/surprise.png">
+          <h2>Matteo</h2>
+      </li>
+    */
+    // li = List Item
+    var li = '<li id="' + index + '">' 
+    + '<h2 class="title">' + data.title 
+    + '</h2><br>' + '<p>' + data.description 
+    + ', posted by ' + data.name 
+    + ' on ' 
+    + data.date + ' </p>' + ''
+    + '<img src="' + data.image + '"></li><hr>' 
+    return li;
+}
+
 function makeDetailsHTML(data) {
     /*
       This function creates some nice HTML around data for the #details section
@@ -22,14 +42,34 @@ function makeDetailsHTML(data) {
       </p>
       <a class="contact button">Contact Matteo</a>
     */
-    var html = '<h2>' + data.name + '</h2><br>' + '<img src="' + data.image + '">' + '<p>About: ' + data.about + '</p>' + '<p>Skills: ' + data.skills + '</p>' + '<button type="submit" class="contact button" href="mailto:' + data.email + '">Contact ' + data.name + '</button>'
+    var html = '<h2><b>' + data.name + '</b></h2><br>' + '<img src="' + data.image + '">' + '<p><b>About ' + data.name + '</b><br> ' + data.about + '</p>' + '<p><b>My Skills</b><br>' + data.skills + '</p>' + '<button type="submit" class="contact button" href="mailto:' + data.email + '">Contact ' + data.name + '</button>'
     return html;
+}
+
+function makeJobDetailsHTML(data) {
+    /*
+      This function creates some nice HTML around data for the #details section
+      Return something like this:
+      <h2>Matteo</h2>
+      <img src="https://ma.tteo.me/assets/surprise.png">
+      <p>I teach people aged 6 to 60+ how to be creative with code.
+      </p>
+      <a class="contact button">Contact Matteo</a>
+    */
+    var jobHtml = '<h1>' + data.title + '</h1><p>Posted by <b>' + data.name + '</b> on <b>' + data.date + '</b></p><br>' + '<img src="' + data.image + '">' + '<p><b>Job Description</b><br>' + data.description + '</p>' + '<p><b>Skills Required</b><br>' + data.skills + '</p>' + '<button type="submit" class="contact button" href="mailto:' + data.email + '">Contact ' + data.name + '</button>'
+    return jobHtml;
 }
 
 function showList(dataList, interfaceList) {
     // update the ul content with the result of makeListHTML(list)
     // html is a jQuery function
     interfaceList.html(makeListHTML(dataList));
+}
+
+function showJobs(dataList, interfaceList) {
+    // update the ul content with the result of makeListHTML(list)
+    // html is a jQuery function
+    interfaceList.html(makeJobListHTML(dataList));
 }
 /*function showDetails (data) 
 {
@@ -49,6 +89,20 @@ function makeListHTML(list) {
     while (counter < total) {
         var data = list[counter];
         var li = makeListItemHTML(data, counter);
+        // add the list item to the html
+        html += li;
+        // update the counter, to avoid infinite loops!
+        counter = counter + 1;
+    }
+    return html;
+} function makeJobListHTML(list) {
+    var html = ''; // empty for now, we'll add HTML as we loop through the list 
+    var total = list.length;
+    // loop through list
+    var counter = 0;
+    while (counter < total) {
+        var data = list[counter];
+        var li = makeJobListItemHTML(data, counter);
         // add the list item to the html
         html += li;
         // update the counter, to avoid infinite loops!

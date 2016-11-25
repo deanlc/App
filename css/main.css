@@ -1,5 +1,5 @@
 body {
-    font-family: 'Montserrat';
+    font-family: 'Ubuntu';
     background-image: url("http://i.imgur.com/nA9gQvc.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -13,6 +13,12 @@ ol {
     list-style-type: none;
     padding: 0;
 }
+li:hover {
+    background-color: rgba(85, 195, 246, 0.54);
+    border-radius: 10px;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
 
 li {
     font-size: 1em;
@@ -21,15 +27,10 @@ li {
     border-style: solid;
     border-color: rgb(85, 195, 246);
     border-width: thin;
-    border-radius: 10px;
     background-color: rgba(85, 195, 246, 0.22);
     color: whitesmoke;
-}
-
-li:hover {
-    background-color: rgba(85, 195, 246, 0.54);
-    -webkit-transition: all .3s;
-    transition: all .2s;
+-webkit-transition: all 1s;
+    transition: all 1s;
 }
 
 li img {
@@ -126,15 +127,18 @@ section {
     /*    border-radius: 10px;*/
 }
 
-#rb {
-    font-size: 5em;
-}
-
 #rb:hover {
     color: rgb(85, 195, 246);
-    -webkit-transition: all .3s;
-    transition: all .2s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
 }
+
+#rb {
+    font-size: 5em;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
 
 #searchbar {
     background-color: rgb(62, 62, 62);
@@ -158,6 +162,13 @@ select {
     height: 40px;
 }
 
+button:hover {
+    background-color: #55c3f6;
+    border-color: whitesmoke;
+    border-radius: 10px;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
 button {
     background-color: rgba(85, 195, 246, 0.22);
     border-style: solid;
@@ -166,14 +177,12 @@ button {
     font-size: 20px;
     width: 200px;
     height: 60px;
+    
+    -webkit-transition: all 1s;
+    transition: all 1s;
 }
 
-button:hover {
-    background-color: rgb(85, 195, 246);
-    border-color: whitesmoke;
-    -webkit-transition: all .3s;
-    transition: all .2s;
-}
+
 
 #register {
     margin-top: 10%;
@@ -201,4 +210,11 @@ button:hover {
 .toggle {
     display: fixed;
     float: right;
+} hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(85,195,246,0) 0%,rgba(85,195,246,1) 50%,rgba(85,195,246,0) 100%);
+} .b {
+    font-weight: bold;
 }
+

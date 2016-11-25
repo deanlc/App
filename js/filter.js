@@ -107,3 +107,41 @@
 
     return sortedList;
 }
+
+// JOBS
+
+    function filterAndSortJobs(completeJobs, selectedJob) 
+{
+	// using Array.filter function to filter the array and store the result into the filteredList
+	// if the function inside returns true, it will store into filteredList
+	// see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+    var filteredJobs = completeJobs.filter(function(jobs) 
+    {
+    	// get the value of the selectedOption.
+    	// eg. person['bakingSkills']
+    	// see: http://www.w3schools.com/js/js_objects.asp
+        var jobValue = selectedJob;
+        var jobCourse = jobs.course;
+        
+        console.log("You selected " + jobValue);
+
+        // typeof will check the type of element
+        // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+        // it checks if the value is either a number or a boolean (ie true or false)
+        if (jobValue == jobCourse)
+        {
+            // if the value is a number, it will check if the number is in between 4 and 5
+            jobValue = true;
+        } 
+        if (typeof jobValue == 'boolean') 
+        {
+            return jobValue;
+        } 
+    });
+
+    // using the Array.sort function to sort the array and store the result in sortedList
+    // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+    var sortedJobs = filteredJobs;
+
+    return sortedJobs;
+}
