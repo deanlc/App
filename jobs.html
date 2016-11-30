@@ -34,41 +34,50 @@
     <section id="sign_up"><a href="index.html"><button id="back_signUp">Back</button></a><br>
         
         <div id="jobs_sign_up">
-            <h1>Fill in this form to list yourself as a student</h1><hr>
-            <form id="studentPush" action="" method="post">
+            <h1>Fill in this form to post a job listing</h1><hr>
+            <form action="" method="post">
       <p>
-      What's your name? <br/><input name="name" type="text" placeholder="e.g. Billie">  
-      </p>
-      <p>What course are you studying?<br/>
-      <select name="course">
-        <option value="webMedia">Web Media</option>
-        <option value="animation">Animation</option>
-        <option value="soundDesign">Sound Design</option>
-        <option value="musicMedia">Music for Media</option>
-        <option value="graphicDesign">Graphic Design</option>
-        <option value="fashion">Fashion</option>
-        <option value="photography">Photography</option>
-      </select>
+        What's your name? <br/><input name="name" type="text" placeholder="e.g. Billie">  
       </p>
       <p>
-        Skills <br/>
-        <textarea name="skills" placeholder="e.g. Photography, Photoshop, Communication"></textarea> 
+        Posting Title <br/><input name="title" type="text" placeholder="e.g. Need photography student">  
       </p>
       <p>
-      Give an introduction about yourself<br/>
-    <textarea name="about" placeholder="What's your occupation/hobbies?"></textarea>  
+        Description of posting<br/> 
+        <textarea name="description" placeholder="Give a summary of what it is you require people to do"></textarea> 
+      </p>
+      <p>
+        Skills required for this posting<br/>
+        <textarea name="skills" placeholder="What kind of skills do people need to have for your job?"></textarea> 
+      </p>
+      <p>
+        What course is relevant to your posting?<br/>
+        <select name="course">
+          <option value="webMedia">Web Media</option>
+          <option value="animation">Animation</option>
+          <option value="soundDesign">Sound Design</option>
+          <option value="musicMedia">Music for Media</option>
+          <option value="graphicDesign">Graphic Design</option>
+          <option value="fashion">Fashion</option>
+          <option value="photography">Photography</option>
+        </select>
       </p>
       <p>
         Image URL <br/>
-        <input name="image" placeholder="Image URL" type="url">  
+        <input name="image" type="url">  
       </p>
     <p>
       Email <br/>
-      <input name="email" type="email" placeholder="name@email.com">  
+      <input name="email" type="email">  
     </p>
+      <p>
+      <input id="date" name="date" value=""> 
+      
+      </p>
       <p>
         <button type="submit">Submit</button>
       </p>
+    
     </form>
             
         </div>
@@ -84,17 +93,12 @@
         window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
     </script>
     <script src="js/plugins.js"></script>
-    <!--      load mapbox      -->
-<!--
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.js'></script>
-    <script src="js/mapbox.js"></script>
--->
     <script src="js/main.js"></script>
     <script src="js/filter.js"></script>
     <script src="js/show.js"></script>
     <script src="js/moment.min.js"></script>
     <script src="js/jquery.getFormData.js"></script>
-    <script src="pushing/peoplepush.js"></script>
+    <script src="js/pushing/jobpush.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         (function (b, o, i, l, e, r) {

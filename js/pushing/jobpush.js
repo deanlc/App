@@ -1,4 +1,5 @@
-var databaseListJobs = database.ref( 'jobs' );
+var database = firebase.database();
+var databaseList = database.ref( 'jobs' );
 
 // use jQuery to select the <form>
 var form = jQuery( 'form' );
@@ -29,18 +30,16 @@ form.submit( function( event )
   event.preventDefault();
 
   // put the form data inside dataUnit 
-  dataUnitJob = form.serializeJSON( {parseBooleans: true, parseNumbers: true, checkboxUncheckedValue: "false"} );
+  dataUnit = form.serializeJSON( {parseBooleans: true, parseNumbers: true, checkboxUncheckedValue: "false"} );
 
   // log what's inside dataUnit
-  console.log( dataUnitJob );
+  console.log( dataUnit );
 
-  // send dataUnit to databaseListJobs
-  databaseListJobs.push( dataUnitJob )
-  .then(function() 
-  {
+  // send dataUnit to databaseList
+  databaseList.push(dataUnit).then(function() {
     alert('Success!');
     // form[0].reset(); // un-comment this line if you want the form to be cleared from previous values
-  })
+  });
   .catch(function(error) 
   {
     console.error( error );

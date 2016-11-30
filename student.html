@@ -35,49 +35,40 @@
         
         <div id="jobs_sign_up">
             <h1>Fill in this form to post a job listing</h1><hr>
-            <form id="jobPush" action="" method="post">
+            <form action="" method="post">
       <p>
-        What's your name? <br/><input name="name" type="text" placeholder="e.g. Billie">  
+      What's your name? <input name="name" type="text" placeholder="e.g. Billie">  
+      </p>
+      <p>What course are you studying?
+      <select name="course">
+        <option value="webMedia">Web Media</option>
+        <option value="animation">Animation</option>
+        <option value="soundDesign">Sound Design</option>
+        <option value="musicMedia">Music for Media</option>
+        <option value="graphicDesign">Graphic Design</option>
+        <option value="fashion">Fashion</option>
+        <option value="photography">Photography</option>
+      </select>
       </p>
       <p>
-        Posting Title <br/><input name="title" type="text" placeholder="e.g. Need photography student">  
+        Skills 
+        <textarea name="skills"></textarea> 
       </p>
       <p>
-        Description of posting<br/> 
-        <textarea name="description" placeholder="Give a summary of what it is you require people to do"></textarea> 
+      Give an introduction about yourself
+    <textarea name="about"></textarea>  
       </p>
       <p>
-        Skills required for this posting<br/>
-        <textarea name="skills" placeholder="What kind of skills do people need to have for your job?"></textarea> 
-      </p>
-      <p>
-        What course is relevant to your posting?<br/>
-        <select name="course">
-          <option value="webMedia">Web Media</option>
-          <option value="animation">Animation</option>
-          <option value="soundDesign">Sound Design</option>
-          <option value="musicMedia">Music for Media</option>
-          <option value="graphicDesign">Graphic Design</option>
-          <option value="fashion">Fashion</option>
-          <option value="photography">Photography</option>
-        </select>
-      </p>
-      <p>
-        Image URL <br/>
+        Image URL 
         <input name="image" type="url">  
       </p>
     <p>
-      Email <br/>
+      Email 
       <input name="email" type="email">  
     </p>
       <p>
-      <input id="date" name="date" value=""> 
-      
+        <button type="submit">Push it!</button>
       </p>
-      <p>
-        <button type="submit">Submit</button>
-      </p>
-    
     </form>
             
         </div>
@@ -93,17 +84,12 @@
         window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
     </script>
     <script src="js/plugins.js"></script>
-    <!--      load mapbox      -->
-<!--
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.js'></script>
-    <script src="js/mapbox.js"></script>
--->
     <script src="js/main.js"></script>
     <script src="js/filter.js"></script>
     <script src="js/show.js"></script>
     <script src="js/moment.min.js"></script>
     <script src="js/jquery.getFormData.js"></script>
-    <script src="pushing/jobpush.js"></script>
+    <script src="js/pushing/peoplepush.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         (function (b, o, i, l, e, r) {
