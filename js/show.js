@@ -44,7 +44,7 @@ function makeDetailsHTML(data) {
       </p>
       <a class="contact button">Contact Matteo</a>
     */
-    var html = '<h2><b>' + data.name + '</b></h2><br>' + '<img src="' + data.image + '">' + '<p><b>About ' + data.name + '</b><br> ' + data.about + '</p>' + '<p><b>My Skills</b><br>' + data.skills + '</p>' + '<button type="submit" class="contact button" href="mailto:' + data.email + '">Contact ' + data.name + '</button>'
+    var html = '<h2><b>' + data.name + '</b></h2><br>' + '<img src="' + data.image + '">' + '<p><b>About ' + data.name + '</b><br> ' + data.about + '</p>' + '<p><b>My Skills</b><br>' + data.skills + '</p>' + '<button><a type="submit" class="contact button" href="mailto:' + data.email + '">Contact ' + data.name + '</button></a>'
     return html;
 }
 
@@ -58,7 +58,7 @@ function makeJobDetailsHTML(data) {
       </p>
       <a class="contact button">Contact Matteo</a>
     */
-    var jobHtml = '<h1>' + data.title + '</h1><p>Posted by <b>' + data.name + '</b> on <b>' + data.date + '</b></p><br>' + '<img src="' + data.image + '">' + '<p><b>Job Description</b><br>' + data.description + '</p>' + '<p><b>Skills Required</b><br>' + data.skills + '</p>' + '<button type="submit" class="contact button" href="mailto:' + data.email + '">Contact ' + data.name + '</button>'
+    var jobHtml = '<h1>' + data.title + '</h1><p>Posted by <b>' + data.name + '</b> on <b>' + data.date + '</b></p><br>' + '<img src="' + data.image + '">' + '<p><b>Job Description</b><br>' + data.description + '</p>' + '<p><b>Skills Required</b><br>' + data.skills + '</p>' + '<button><a type="submit" class="contact button" href="mailto:' + data.email + '">Contact ' + data.name + '</button></a>'
     return jobHtml;
 }
 

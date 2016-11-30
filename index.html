@@ -86,7 +86,7 @@
             <p id="results_message">These people might be able to help you -
                 <ol> </ol>
                 <ul></ul>
-            <button class="left" id="back_home">Back</button>
+            <button id="back_home2">Back</button>
             </p>
         </table>
 <!--        <div id='map'></div>-->
@@ -100,102 +100,13 @@
         <br/>
         <div id="info"> <a class="contact_button">Contact this person</a> </div>
     </section>
-    <section id="sign_up">
+    <section id="sign_up"><button id="back_signUp">Back</button><br>
         <div id="sign_up_home">
         
             <h1>Do you want to sign up as a student or post a job?</h1>
-            <button id="studentSignUpButton">Student</button> 
-            <button id="jobSignUpButton">Job Listing</button><br><br>
+            <button onclick="window.location.href='/signup/student.html'">Student</button> 
+            <button onclick="window.location.href='/signup/jobs.html'">Job Listing</button><br><br>
         
-        </div>
-        
-        <div id="jobs_sign_up">
-            <h1>Fill in this form to post a job listing</h1><hr>
-            <form action="" method="post">
-      <p>
-        What's your name? <br/><input name="name" type="text" placeholder="e.g. Billie">  
-      </p>
-      <p>
-        Posting Title <br/><input name="title" type="text" placeholder="e.g. Need photography student">  
-      </p>
-      <p>
-        Description of posting<br/> 
-        <textarea name="description" placeholder="Give a summary of what it is you require people to do"></textarea> 
-      </p>
-      <p>
-        Skills required for this posting<br/>
-        <textarea name="skills" placeholder="What kind of skills do people need to have for your job?"></textarea> 
-      </p>
-      <p>
-        What course is relevant to your posting?<br/>
-        <select name="course">
-          <option value="webMedia">Web Media</option>
-          <option value="animation">Animation</option>
-          <option value="soundDesign">Sound Design</option>
-          <option value="musicMedia">Music for Media</option>
-          <option value="graphicDesign">Graphic Design</option>
-          <option value="fashion">Fashion</option>
-          <option value="photography">Photography</option>
-        </select>
-      </p>
-      <p>
-        Image URL <br/>
-        <input name="image" type="url">  
-      </p>
-    <p>
-      Email <br/>
-      <input name="email" type="email">  
-    </p>
-      <p>
-      <input id="date" name="date" value=""> 
-      
-      </p>
-      <p>
-        <button type="submit">Submit</button>
-      </p>
-    
-    </form>
-            
-        </div>
-        <div id="people_sign_up">
-        
-        <h1>Fill in this form to list yourself as a student</h1><hr>
-            <form action="" method="post">
-      <p>
-      What's your name? <br/><input name="name" type="text" placeholder="e.g. Billie">  
-      </p>
-      <p>What course are you studying?<br/>
-      <select name="course">
-        <option value="webMedia">Web Media</option>
-        <option value="animation">Animation</option>
-        <option value="soundDesign">Sound Design</option>
-        <option value="musicMedia">Music for Media</option>
-        <option value="graphicDesign">Graphic Design</option>
-        <option value="fashion">Fashion</option>
-        <option value="photography">Photography</option>
-      </select>
-      </p>
-      <p>
-        Skills <br/>
-        <textarea name="skills"></textarea> 
-      </p>
-      <p>
-      Give an introduction about yourself<br/>
-    <textarea name="about"></textarea>  
-      </p>
-      <p>
-        Image URL <br/>
-        <input name="image" type="url">  
-      </p>
-    <p>
-      Email <br/>
-      <input name="email" type="email">  
-    </p>
-      <p>
-        <button type="submit">Submit</button>
-      </p>
-    </form>
-            
         </div>
     </section>
     
@@ -219,6 +130,7 @@
     <script src="js/show.js"></script>
     <script src="js/moment.min.js"></script>
     <script src="js/jquery.getFormData.js"></script>
+    <script src="js/pushing/peoplepush.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         (function (b, o, i, l, e, r) {
