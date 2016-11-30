@@ -82,9 +82,10 @@ li a:hover:not(.active) {
 #details,
 #search_section,
 #jobs_section,
-#search_jobs {
+#search_jobs,
+#sign_up {
     display: none;
-}
+} 
 
 #details img {
     max-height: 200px;
@@ -155,11 +156,6 @@ select {
     border-color: whitesmoke;
     border-radius: 5px;
     color: black;
-    width: 75px;
-    height: 40px;
-}
-
-select {
     width: 50%;
     height: 40px;
 }
@@ -208,6 +204,10 @@ button {
     display: fixed;
     float: left;
 }
+.right {
+    display: fixed;
+    float: right;
+}
 
 .toggle {
     display: fixed;
@@ -220,3 +220,26 @@ button {
     font-weight: bold;
 }
 
+/* Signup Section*/
+#sign_up input, textarea
+{
+  width: 90%;
+  cursor: pointer;
+  padding: 0.5em;
+  margin: .25em auto 1em;
+  border: thin solid rgb(85, 195, 246);
+  color: black;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: .6s;
+}
+
+#sign_up input:hover, textarea:hover
+{
+  border-radius: 10px;
+    transition: .6s;
+} #date {
+    display: none;
+} #people_sign_up, #jobs_sign_up {
+    display: none;
+}
