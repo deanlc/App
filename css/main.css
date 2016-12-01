@@ -6,7 +6,9 @@ body {
     text-align: center;
     background-color: rgb(85, 195, 246);
     color: whitesmoke;
-    margin-left: 5%;
+    
+    margin: auto;
+    min-width: 350px;
 } b {
     font-family: 'ravensbourne_sansbold';
 }
@@ -131,8 +133,7 @@ section {
     border-style: solid;
     border-color: rgb(85, 195, 246);
     border-width: 1px;
-    padding: 6px;
-    padding-left: 10px;
+    padding: 10px;
     /*    border-radius: 10px;*/
 }
 
