@@ -1,11 +1,12 @@
+// get a reference to the database service
 var database = firebase.database();
-var databaseList = database.ref( 'jobs' );
+var databaseListJob = database.ref( 'jobs' );
 
 // use jQuery to select the <form>
 var form = jQuery( 'form' );
 
 // we'll use jQuery to grab the data from the <form> and store it inside dataUnit
-var dataUnitJob = {}; 
+var dataUnit = {}; 
 
 // when you submit the form...
 form.submit( function( event ) 
@@ -35,11 +36,13 @@ form.submit( function( event )
   // log what's inside dataUnit
   console.log( dataUnit );
 
-  // send dataUnit to databaseList
-  databaseList.push(dataUnit).then(function() {
+  // send dataUnit to databaseListJob
+  databaseListJob.push( dataUnit )
+  .then(function() 
+  {
     alert('Success!');
     // form[0].reset(); // un-comment this line if you want the form to be cleared from previous values
-  });
+  })
   .catch(function(error) 
   {
     console.error( error );

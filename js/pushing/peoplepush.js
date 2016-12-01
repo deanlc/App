@@ -1,3 +1,4 @@
+// get a reference to the database service
 var database = firebase.database();
 var databaseList = database.ref( 'people' );
 
@@ -5,27 +6,11 @@ var databaseList = database.ref( 'people' );
 var form = jQuery( 'form' );
 
 // we'll use jQuery to grab the data from the <form> and store it inside dataUnit
-var dataUnitJob = {}; 
+var dataUnit = {}; 
 
 // when you submit the form...
 form.submit( function( event ) 
 {
-  var today = new Date();
-  /*
-  var dd = today.getDate();
-  var mm = today.getMonth()+1; //January is 0!
-
-  var yyyy = today.getFullYear();
-  if(dd<10){
-    dd='0'+dd
-  } 
-  if(mm<10){
-    mm='0'+mm
-  } 
-  today = dd+'/'+mm+'/'+yyyy;
-  */
-  document.getElementById("date").value = today;
-  
   // stop this from reloading
   event.preventDefault();
 
@@ -36,7 +21,7 @@ form.submit( function( event )
   console.log( dataUnit );
 
   // send dataUnit to databaseList
-  peopleData.push( dataUnit )
+  databaseList.push( dataUnit )
   .then(function() 
   {
     alert('Success!');
