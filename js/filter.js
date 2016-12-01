@@ -83,13 +83,12 @@
     	// eg. person['bakingSkills']
     	// see: http://www.w3schools.com/js/js_objects.asp
         var value = selectedOption;
+        var all = 'all';
         var course = person.course;
         
         console.log("You selected " + value);
 
-        // typeof will check the type of element
-        // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
-        // it checks if the value is either a number or a boolean (ie true or false)
+        // check if the value is the same as the course
         if (value == course)
         {
             // if the value is a number, it will check if the number is in between 4 and 5
