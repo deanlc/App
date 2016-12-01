@@ -1,11 +1,12 @@
 @media screen and (max-width: 481px){
 
 
-    #rb {
+    .hide {
         display: none;
     } 
     #logo {
-     width: 100%;   
+     width: 60%;
+        height: 60%;
     }
 
 
