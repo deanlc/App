@@ -5,8 +5,10 @@
         display: none;
     } 
     #logo {
-     width: 60%;
-        height: 60%;
+     width: 100px;
+    height: 100px;
+    } section {
+        max-width: 90%;
     }
 
 
