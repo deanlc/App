@@ -1,6 +1,8 @@
 @media screen and (max-width: 620px){
 
-
+    body {
+        font-family: 'ravensbourne_sansbold';
+    }
     
     .hide {
         display: none;
