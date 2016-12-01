@@ -1,14 +1,18 @@
-@media screen and (max-width: 481px){
+@media screen and (max-width: 620px){
 
 
     .hide {
         display: none;
     } 
-    #logo {
-     width: 100px;
-    height: 100px;
+    img#logo {
+     max-width: 80%;
+        max-height: 80%;
     } section {
         max-width: 90%;
+    } button {
+        margin-top: 10px;
+    } .left, .right {
+        float: none;
     }
 
 
