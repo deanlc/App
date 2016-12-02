@@ -52,18 +52,22 @@ I then created a mobile.css file and linked it in the header:
     img#logo {
         max-width: 65%;
         max-height: 65%;
-    } section {
+    } 
+    section {
         max-width: 90%;
-    } button {
+    } 
+    button {
         margin-top: 10px;
-    } .left, .right {
+    } 
+    .left, .right {
         float: none;
     }
     p {
         max-width: 70%;
         margin: auto;
         margin-bottom: 10px;
-    } h1 {
+    } 
+    h1 {
         margin-top: 10px;
         margin-bottom: 10px;
     }
