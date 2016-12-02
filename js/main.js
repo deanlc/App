@@ -129,7 +129,7 @@ find_jobs.click(function () {
         var selectedName = 'All Jobs';
         search_term.text("Showing All Jobs");
     } 
-    results_message.text("You might be interested in these jobs:");
+    results_message.text("You might be interested in these:");
     
     console.log("Course: " + jobs.course);
     var jobsResults = filterAndSortJobs(jobsList, selectedJob);
