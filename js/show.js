@@ -58,7 +58,12 @@ function makeJobDetailsHTML(data) {
       </p>
       <a class="contact button">Contact Matteo</a>
     */
-    var jobHtml = '<h1>' + data.title + '</h1><p>Posted by <b>' + data.name + '</b> on <b>' + data.date + '</b></p><br>' + '<img src="' + data.image + '">' + '<p><b>Job Description</b><br>' + data.description + '</p>' + '<p><b>Skills Required</b><br>' + data.skills + '</p>' + '<button><a type="submit" class="contact button" href="mailto:' + data.email + '">Contact ' + data.name + '</button></a>'
+    var date = moment(data.date).endOf('day').fromNow();
+    var longDate = moment(data.date).format('L');    // 12/02/2016
+
+
+    
+    var jobHtml = '<h1>' + data.title + '</h1><p>Posted by <b>' + data.name + '</b> on <b>' + longDate + ', ' + date + '.</b></p><br>' + '<img src="' + data.image + '">' + '<p><b>Job Description</b><br>' + data.description + '</p>' + '<p><b>Skills Required</b><br>' + data.skills + '</p>' + '<button><a type="submit" class="contact button" href="mailto:' + data.email + '">Contact ' + data.name + '</button></a>'
     return jobHtml;
 }
 
