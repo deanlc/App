@@ -40,10 +40,3 @@ jobsData.on('child_added', function (childData) {
     var jobs = childData.val(); // extract the data about the job
     jobsList.push(jobs); //add the person to the jobsList
 });
-//peopleData.on('child_added', function( firebaseObject ) 
-//{
-//    var person = firebaseObject.val(); 
-//    peopleList.push(person);
-//    // "push" is JavaScript's lingo for "add to a list"
-//})
-//

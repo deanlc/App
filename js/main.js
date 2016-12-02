@@ -76,7 +76,9 @@ find_button.click(function () {
         var selectedName = 'Music for Media';
     } if (selectedOption == 'graphicDesign') {
         var selectedName = 'Graphic Design';
-    } 
+    } if (selectedOption == 'all') {
+        var selectedName = 'All Courses';
+    }
     
     
     console.log("You picked " + selectedOption);

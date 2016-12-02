@@ -1,14 +1,15 @@
+/* CSS for mobile/small browser */
+
 @media screen and (max-width: 620px){
 
     body {
         font-family: 'ravensbourne_sansbold';
     }
-    
     .hide {
         display: none;
     } 
     img#logo {
-     max-width: 80%;
+        max-width: 80%;
         max-height: 80%;
     } section {
         max-width: 90%;

@@ -72,6 +72,7 @@
 //
 //    return sortedList;
 //}
+
     function filterAndSortList(completeList, selectedOption) 
 {
 	// using Array.filter function to filter the array and store the result into the filteredList
@@ -83,7 +84,7 @@
     	// eg. person['bakingSkills']
     	// see: http://www.w3schools.com/js/js_objects.asp
         var value = selectedOption;
-        var all = 'all';
+        var all = "all";
         var course = person.course;
         
         console.log("You selected " + value);
@@ -92,6 +93,8 @@
         if (value == course)
         {
             // if the value is a number, it will check if the number is in between 4 and 5
+            value = true;
+        } if (value == all) {
             value = true;
         } 
         if (typeof value == 'boolean') 
@@ -120,6 +123,7 @@
     	// eg. person['bakingSkills']
     	// see: http://www.w3schools.com/js/js_objects.asp
         var jobValue = selectedJob;
+        var all = "all";
         var jobCourse = jobs.course;
         
         console.log("You selected " + jobValue);
@@ -131,7 +135,9 @@
         {
             // if the value is a number, it will check if the number is in between 4 and 5
             jobValue = true;
-        } 
+        } if (jobValue == all) {
+            jobValue = true;
+        }
         if (typeof jobValue == 'boolean') 
         {
             return jobValue;
