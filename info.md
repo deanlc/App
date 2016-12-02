@@ -1,6 +1,4 @@
 #Filtr Finder
-**Name:** Dean Chalk
-
 * [GitHub Link](https://github.com/deanlc/Connect)
 * [Pages Link](https://deanlc.github.io/Connect/index.html)
 
