@@ -44,7 +44,7 @@ function makeDetailsHTML(data) {
       </p>
       <a class="contact button">Contact Matteo</a>
     */
-    var html = '<h2 class="blue"><b>' + data.name + '</b></h2><br>' + '<img src="' + data.image + '">' + '<p class="blue"><b>About ' + data.name + '</b><br> ' + data.about + '</p>' + '<p class="blue"><b>My Skills</b><br>' + data.skills + '</p>' + '<button><a type="submit" class="contact button" href="mailto:' + data.email + '">Contact ' + data.name + '</button></a>'
+    var html = '<table><tbody><tr><h1><b>' + data.name + '</b></h1><hr><br>' + '<td id="profileImg"><img src="' + data.image + '"></td>' + '<td><p class="blue"><b>About Me</b><br> ' + data.about + '</p>' + '<p class="blue"><b>My Skills</b><br>' + data.skills + '</p></td></tr></tbody></table><hr>' + '<button><a type="submit" class="contact button" href="mailto:' + data.email + '">Contact ' + data.name + '</button></a>'
     return html;
 }
 

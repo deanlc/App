@@ -255,3 +255,12 @@ button {
     border-width: 1px;
     border-color: rgba(85, 195, 246, 0.45);
 }
+
+table {
+    width: 100%;
+}
+
+#profileImg {
+    width: 200px;
+    padding-right: 12px;
+}
