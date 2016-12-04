@@ -156,6 +156,7 @@ find_jobs.click(function () {
 
 signUpButton.click(function () {
     results.hide();
+    home.hide();
     signUpHome.fadeIn(500);
     signup.fadeIn(500);
 });

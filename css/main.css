@@ -190,8 +190,7 @@ button {
 
 
 #register {
-    margin-top: 10%;
-    width: 500px;
+    margin-top: 5%;
 }
 
 .li_result {
@@ -230,7 +229,7 @@ button {
 /* Signup Section*/
 #sign_up input, textarea
 {
-  width: 90%;
+  width: 70%;
   cursor: pointer;
   padding: 0.5em;
   margin: .25em auto 1em;
@@ -239,9 +238,10 @@ button {
   -webkit-appearance: none;
   -moz-appearance: none;
   transition: .6s;
+    text-align: center;
 }
 
-#sign_up input:hover, textarea:hover
+#sign_up input:focus, textarea:focus
 {
   border-radius: 10px;
     transition: .6s;
